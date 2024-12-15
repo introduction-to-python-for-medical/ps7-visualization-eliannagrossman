@@ -4,6 +4,11 @@ import seaborn as sns
 from sklearn.datasets import fetch_openml
 data = fetch_openml(name='diabetes', version=1, as_frame=True)
 print(data.DESCR)
+df = data.frame
+
+df.sample(5)
+df.types()
+df.describe()
 features = df.columns
 selected_features = [features[0], features[2], features[4], features[6], features[7]]
 features = list(df.columns)
